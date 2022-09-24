@@ -1,7 +1,7 @@
 ---
 title: "关于"
 date: 2022-09-24T16:38:56Z
-draft: true
+draft: false
 ---
 # 关于blog
 不知道说什么，就把Twitter的Bio放上来吧，以后再改：
