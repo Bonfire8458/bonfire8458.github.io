@@ -12,4 +12,4 @@ draft: false
  - 嗯嗯这个是🍥debianer
  - 没玩过B站，发现跟B站up主名字冲突了，抱歉
  - 日本語しょしんしゃ，日语初学中。
- - sha256:curl -L http://tinyurl.com/muwsrbms
+ - sha256:curl -L https://tiny.one/yc43fu4a
