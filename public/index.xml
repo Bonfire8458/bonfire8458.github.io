@@ -2,18 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>姆Q的大圖書館</title>
-    <link>https://bonfire8548.github.io/</link>
+    <link>https://bonfire8458.github.io/</link>
     <description>Recent content on 姆Q的大圖書館</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://bonfire8548.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="https://bonfire8458.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>关于</title>
-      <link>https://bonfire8548.github.io/about/</link>
+      <title>关于blog</title>
+      <link>https://bonfire8458.github.io/about/</link>
       <pubDate>Sat, 24 Sep 2022 16:38:56 +0000</pubDate>
       
-      <guid>https://bonfire8548.github.io/about/</guid>
-      <description>关于blog 不知道说什么，就把Twitter的Bio放上来吧，以后再改：
- INTP-A 秉持勇气与智慧，拿起认知心理学这根魔杖，舞起来 阿德勒心理学初学 咖啡续命中ing&amp;hellip; 嗯嗯这个是🍥debianer 没玩过B站，发现跟B站up主名字冲突了，抱歉 日本語しょしんしゃ，日语初学中。 sha256:curl -L http://tinyurl.com/muwsrbms  </description>
+      <guid>https://bonfire8458.github.io/about/</guid>
+      <description>嗯呢，不知道说什么，就把Twitter的Bio放上来吧，以后再改： INTP-A 秉持勇气与智慧，拿起认知心理学这根魔杖，舞起来 阿德勒心理学初学 咖啡续命中</description>
     </item>
     
   </channel>
