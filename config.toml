@@ -1,8 +1,20 @@
+# 生成网址所用域名
 baseURL = "https://bonfire8458.github.io/"
 #baseURL = "http://192.168.1.61:1313/"
+# 语言编码(中文: zh-CN)
 languageCode = "zh-cn"
+# 默认的内容语言
+defaultContentLanguage = "zh-cn"
+# 创建robots.txt，建议设置为true
+enableRobotsTXT = false
+# 启用 Emoji; see emoji-cheat-sheet.com
+enableEmoji = true
+# 自动检测是否包含中文/日文/韩文，该参数会影响摘要和字数统计功能，建议设置为true。Hugo会自动提取文章的前70个字符作为摘要，hasCJKLanguage = true才能发挥更好的效果。
+hasCJKLanguage = true
 title = "姆Q的大圖書館"
+# 主题
 theme = "m10c"
+
 [menu]
   [[menu.main]]
     identifier = "home"

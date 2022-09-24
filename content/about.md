@@ -1,9 +1,8 @@
 ---
-title: "关于"
+title: "关于blog"
 date: 2022-09-24T16:38:56Z
 draft: false
 ---
-# 关于blog
 不知道说什么，就把Twitter的Bio放上来吧，以后再改：
  - INTP-A
  - 秉持勇气与智慧，拿起认知心理学这根魔杖，舞起来
