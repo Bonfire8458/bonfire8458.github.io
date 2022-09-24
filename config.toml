@@ -1,4 +1,4 @@
-baseURL = "https://bonfire8548.github.io/"
+baseURL = "https://bonfire8458.github.io/"
 #baseURL = "http://192.168.1.61:1313/"
 languageCode = "zh-cn"
 title = "姆Q的大圖書館"
@@ -30,11 +30,11 @@ theme = "m10c"
   [[params.social]]
     icon = "github"
     name = "Github"
-    url = "https://github.com/Bonfire8548"
+    url = "https://github.com/Bonfire8458"
   [[params.social]]
     icon = "twitter"
     name = "Twitter"
-    url = "https://twitter.com/Bonfire8548"
+    url = "https://twitter.com/Bonfire8458"
   [[params.social]]
     icon = "telegram"
     name = "Telegram"
