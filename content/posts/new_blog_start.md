@@ -1,5 +1,5 @@
 ---
-title: "第一篇 blog ，纪录部署 hugo"
+title: "第一篇 blog ，纪录部署 hugo 过程"
 date: 2022-09-25T10:23:16Z
 tags: 
   - hugo
