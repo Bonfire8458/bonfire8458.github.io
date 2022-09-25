@@ -57,7 +57,7 @@ USER <user_name>
 WORKDIR /src
 
 #  docker 容器启动后，运行的命令。运行 init.sh 初始化脚本，hugo 服务器监听 0.0.0.0 ，指定 hugo 测试环境 baseURL。
-CMD bash ~/init/init.sh && hugo server --buildDrafts --bind="0.0.0.0" --baseURL=http://<your_ip>1313
+CMD bash ~/init/init.sh && hugo server --buildDrafts --bind="0.0.0.0" --baseURL=http://<your_ip>:1313
 ```
 
 # 二、编写 `./init/init.sh`
@@ -166,7 +166,7 @@ fi
 
 # 七、结束
 ## 备份与迁移
-这样，本地只需要备份 dockerfile 、docker-compose.yml 、init/init.sh 三个文件/文件夹就可以迁移部署有 docker 的机器上了。
+这样，本地只需要备份 dockerfile 、docker-compose.yml 、init/init.sh 三个文件/文件夹就可以迁移部署到有 docker 的机器上了。
 
 重新部署只需要运行 `docker-compose up -d --build` 就可以了。
 
