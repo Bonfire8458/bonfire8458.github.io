@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-cn">
   <head>
-    <title>第一篇 blog ，纪录部署 hugo // 姆Q的大圖書館</title>
+    <title>第一篇 blog ，纪录部署 hugo 过程 // 姆Q的大圖書館</title>
     <link rel="shortcut icon" href="./images/favicon.png" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.80.0" />
@@ -12,11 +12,11 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="第一篇 blog ，纪录部署 hugo"/>
+<meta name="twitter:title" content="第一篇 blog ，纪录部署 hugo 过程"/>
 <meta name="twitter:description" content="嗯呢，一直以来想搭建一个 blog ，纪录一些东西。
 这是 blog 搭建的一些简略纪录，作为第一篇好像也还不错。"/>
 
-    <meta property="og:title" content="第一篇 blog ，纪录部署 hugo" />
+    <meta property="og:title" content="第一篇 blog ，纪录部署 hugo 过程" />
 <meta property="og:description" content="嗯呢，一直以来想搭建一个 blog ，纪录一些东西。
 这是 blog 搭建的一些简略纪录，作为第一篇好像也还不错。" />
 <meta property="og:type" content="article" />
@@ -82,7 +82,7 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">第一篇 blog ，纪录部署 hugo</h1>
+      <h1 class ="post-title">第一篇 blog ，纪录部署 hugo 过程</h1>
       <div class="post-meta">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -148,7 +148,7 @@
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /src</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">#  docker 容器启动后，运行的命令。运行 init.sh 初始化脚本，hugo 服务器监听 0.0.0.0 ，指定 hugo 测试环境 baseURL。</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> bash ~/init/init.sh <span style="color:#f92672">&amp;&amp;</span> hugo server --buildDrafts --bind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.0.0.0&#34;</span> --baseURL<span style="color:#f92672">=</span>http://&lt;your_ip&gt;1313<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> bash ~/init/init.sh <span style="color:#f92672">&amp;&amp;</span> hugo server --buildDrafts --bind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.0.0.0&#34;</span> --baseURL<span style="color:#f92672">=</span>http://&lt;your_ip&gt;:1313<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><h1 id="二编写-initinitsh">二、编写 <code>./init/init.sh</code></h1>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#  判断空文件夹函数，防止重启容器导致数据被删除</span>
 is_empty_dir<span style="color:#f92672">(){</span>
@@ -232,11 +232,14 @@ is_empty_dir<span style="color:#f92672">(){</span>
 <span style="color:#66d9ef">fi</span>
 </code></pre></div><h1 id="七结束">七、结束</h1>
 <h2 id="备份与迁移">备份与迁移</h2>
-<p>这样，本地只需要备份 dockerfile 、docker-compose.yml 、init/init.sh 三个文件/文件夹就可以迁移部署有 docker 的机器上了。</p>
+<p>这样，本地只需要备份 dockerfile 、docker-compose.yml 、init/init.sh 三个文件/文件夹就可以迁移部署到有 docker 的机器上了。</p>
 <p>重新部署只需要运行 <code>docker-compose up -d --build</code> 就可以了。</p>
 <p>把这三个文件提交到私有 git 仓库里面。</p>
 <h2 id="写文章">写文章</h2>
 <p>写文章不太方便，需要使用vim，后续可能需要改用 python 的镜像做基础版本，写一个页面。在这点上 hugo 不太方便，hexo 有 hexo-admin 可以使用可是方便多了。</p>
+<h1 id="评论系统使用推特">评论系统使用推特</h1>
+<blockquote class="twitter-tweet"><p lang="zh" dir="ltr">第一篇blog，放上来看看效果。可惜没有一件分享按扭，之后找找资料，看看应该改什么地方？<a href="https://t.co/JxwYGqD0TZ">https://t.co/JxwYGqD0TZ</a></p>&mdash; 姆Q的大圖書館(心理学)💙💛 (@Bonfire8458) <a href="https://twitter.com/Bonfire8458/status/1574019861847502848?ref_src=twsrc%5Etfw">September 25, 2022</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <div class="post-footer">
       
