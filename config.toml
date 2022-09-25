@@ -1,6 +1,5 @@
 # 生成网址所用域名
 baseURL = "https://bonfire8458.github.io/"
-#baseURL = "http://192.168.1.61:1313/"
 # 语言编码(中文: zh-CN)
 languageCode = "zh-cn"
 # 默认的内容语言
@@ -27,15 +26,20 @@ theme = "m10c"
     url = "/tags/"
     weight = 2
   [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     identifier = "links"
     name = "Links"
     url = "/links/"
-    weight = 4
+    weight = 5
   
 
 [params]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on 姆Q的大圖書館</title>
+    <link>https://bonfire8458.github.io/tags/blog/</link>
+    <description>Recent content in blog on 姆Q的大圖書館</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 25 Sep 2022 10:23:16 +0000</lastBuildDate><atom:link href="https://bonfire8458.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一篇 blog ，纪录部署 hugo</title>
+      <link>https://bonfire8458.github.io/posts/new_blog_start/</link>
+      <pubDate>Sun, 25 Sep 2022 10:23:16 +0000</pubDate>
+      
+      <guid>https://bonfire8458.github.io/posts/new_blog_start/</guid>
+      <description>&lt;p&gt;嗯呢，一直以来想搭建一个 blog ，纪录一些东西。&lt;/p&gt;
+&lt;p&gt;这是 blog 搭建的一些简略纪录，作为第一篇好像也还不错。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
