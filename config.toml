@@ -53,9 +53,9 @@ theme = "m10c"
     url = "https://t.me/bonfire8458"
 
 [params.style]
-  darkestColor = "#11001A"
-  darkColor = "#321942"
-  lightColor = "#afbac4"
-  lightestColor = "#FFFF00"
-  primaryColor = "#BC5DF8"
+  darkestColor = "#160F19"
+  darkColor = "#3A2E42"
+  lightColor = "#E6F2EC"
+  lightestColor = "#F9F9F2"
+  primaryColor = "#C77CF9"
 
