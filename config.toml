@@ -58,13 +58,13 @@ theme = "m10c"
 
 [params.style]
   # 左背景色
-  darkestColor = "#06050A"
+  darkestColor = "#040305"
   # 右背景色
-  darkColor = "#36333A"
+  darkColor = "#38373A"
   # 正文字色
   lightColor = "#E6F2EC"
   # 标题字色
   lightestColor = "#E5E572"
   # 圈圈、链接色
-  primaryColor = "#9B57CC"
+  primaryColor = "#A970D8"
 
