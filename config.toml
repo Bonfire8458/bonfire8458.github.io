@@ -57,9 +57,14 @@ theme = "m10c"
     url = "hacker4265@protonmail.com"
 
 [params.style]
+  # 左背景色
   darkestColor = "#06050A"
-  darkColor = "#39313F"
+  # 右背景色
+  darkColor = "#36333A"
+  # 正文字色
   lightColor = "#E6F2EC"
+  # 标题字色
   lightestColor = "#E5E572"
+  # 圈圈、链接色
   primaryColor = "#9B57CC"
 
