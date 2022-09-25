@@ -31,6 +31,11 @@ theme = "m10c"
     name = "About"
     url = "/about/"
     weight = 3
+  [[menu.main]]
+    identifier = "links"
+    name = "Links"
+    url = "/links/"
+    weight = 4
   
 
 [params]
@@ -39,22 +44,26 @@ theme = "m10c"
   favicon = "./images/favicon.png"
   #description = "* 秉持勇气与智慧，拿起心理学这根魔杖，舞动当下</p><p>* 咖啡续命中ing..."
   description = "咖啡续命中ing..."
+
   [[params.social]]
     icon = "github"
-    name = "Github"
+    name = "GitHub"
     url = "https://github.com/Bonfire8458"
+
   [[params.social]]
     icon = "twitter"
     name = "Twitter"
     url = "https://twitter.com/Bonfire8458"
+
   [[params.social]]
     icon = "send"
     name = "Telegram"
     url = "https://t.me/bonfire8458"
+
   [[params.social]]
     icon = "mail"
     name = "Email"
-    url = "hacker4265@protonmail.com"
+    url = "Unending2924@gmail.com"
 
 [params.style]
   # 左背景色
@@ -68,3 +77,6 @@ theme = "m10c"
   # 圈圈、链接色
   primaryColor = "#A970D8"
 
+[markup.goldmark.renderer]
+# 不渲染内嵌的 HTML 
+# unsafe = true
