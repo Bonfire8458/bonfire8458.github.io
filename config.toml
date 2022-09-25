@@ -48,14 +48,18 @@ theme = "m10c"
     name = "Twitter"
     url = "https://twitter.com/Bonfire8458"
   [[params.social]]
-    icon = "telegram"
+    icon = "send"
     name = "Telegram"
     url = "https://t.me/bonfire8458"
+  [[params.social]]
+    icon = "mail"
+    name = "Email"
+    url = "hacker4265@protonmail.com"
 
 [params.style]
-  darkestColor = "#160F19"
-  darkColor = "#3A2E42"
+  darkestColor = "#06050A"
+  darkColor = "#39313F"
   lightColor = "#E6F2EC"
   lightestColor = "#F9F9F2"
-  primaryColor = "#C77CF9"
+  primaryColor = "#9B57CC"
 
