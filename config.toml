@@ -67,7 +67,7 @@ theme = "m10c"
   [[params.social]]
     icon = "mail"
     name = "Email"
-    url = "Unending2924@gmail.com"
+    url = "mailto:Unending2924@gmail.com"
 
 [params.style]
   # 左背景色
