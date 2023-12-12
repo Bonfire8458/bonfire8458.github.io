@@ -63,6 +63,11 @@ theme = "m10c"
     icon = "send"
     name = "Telegram"
     url = "https://t.me/bonfire8458"
+  
+  [[params.social]]
+    icon = "Matrix"
+    name = "matrix"
+    url = "https://matrix.to/#/@bonfire8458:matrix.org"
 
   [[params.social]]
     icon = "mail"
