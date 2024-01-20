@@ -6,7 +6,17 @@
     <description>Recent content on 姆Q🎀的大圖書館</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 30 Apr 2023 17:09:55 +0000</lastBuildDate><atom:link href="https://bonfire8458.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jan 2024 17:55:13 +0000</lastBuildDate><atom:link href="https://bonfire8458.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firefox 浏览器大内存多核心优化调整</title>
+      <link>https://bonfire8458.github.io/posts/20240120-175513/</link>
+      <pubDate>Sat, 20 Jan 2024 17:55:13 +0000</pubDate>
+      
+      <guid>https://bonfire8458.github.io/posts/20240120-175513/</guid>
+      <description>&lt;h2 id=&#34;事由&#34;&gt;事由&lt;/h2&gt;
+&lt;p&gt;Firefox 在超大内存和超多核心的情况下，策略还是太保守了。姆Q说怎么闲置内存好多，网页还是卡呢。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>有意思的摘抄</title>
       <link>https://bonfire8458.github.io/posts/20230430-170955/</link>
