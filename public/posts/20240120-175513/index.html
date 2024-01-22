@@ -115,7 +115,7 @@ Firefox 在超大内存和超多核心的情况下，策略还是太保守了。
 <p>嗯呢，另外一说，因为使用习惯问题，姆Q一般会开超多 tab 不关的（趴～～～</p>
 <h2 id="配置">配置</h2>
 <p>附上姆Q的 Firefox 设置（Firefox 地址栏输入 <code>about:config</code> 进入配置界面）：</p>
-<pre><code># 渲染和相应相关
+<pre><code># 渲染和响应相关
 content.notify.interval=1000000
 content.notify.ontimer=true
 content.max.tokenizing.time=2000000
@@ -143,7 +143,7 @@ network.http.pipelining.maxrequests=128 #根据核心线程数设置
 
 # 网页内容进程限制
 dom.ipc.processCount=32	
-dom.ipc.processCount.extension=4	
+dom.ipc.processCount.file=4	
 dom.ipc.processCount.privilegedabout=4	
 dom.ipc.processCount.privilegedmozilla=4	
 dom.ipc.processCount.webIsolated=32
