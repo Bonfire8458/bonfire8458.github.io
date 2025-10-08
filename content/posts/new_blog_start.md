@@ -7,7 +7,7 @@ tags:
   - blog
 categories: IT技术
 author: Bonfire8458
-images: ["/images/趴.webp"]
+images: ["static/images/趴.jpg"]
 twitter: 
   card: "summary"
 draft: false
