@@ -1,0 +1,91 @@
+# 生成网址所用域名
+baseURL = "https://bonfire8458.github.io/"
+# 语言编码(中文: zh-CN)
+languageCode = "zh-cn"
+# 默认的内容语言
+defaultContentLanguage = "zh-cn"
+# 创建robots.txt，建议设置为true
+enableRobotsTXT = false
+# 启用 Emoji; see emoji-cheat-sheet.com
+enableEmoji = true
+# 自动检测是否包含中文/日文/韩文，该参数会影响摘要和字数统计功能，建议设置为true。Hugo会自动提取文章的前70个字符作为摘要，hasCJKLanguage = true才能发挥更好的效果。
+hasCJKLanguage = true
+title = "姆Q🎀的大圖書館"
+# 主题
+theme = "m10c"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 4
+  [[menu.main]]
+    identifier = "links"
+    name = "Links"
+    url = "/links/"
+    weight = 5
+  
+
+[params]
+  author = "Bonfire8458"
+  avatar = "./images/favicon.png"
+  favicon = "./images/favicon.png"
+  #description = "* 秉持勇气与智慧，拿起心理学这根魔杖，舞动当下</p><p>* 咖啡续命中ing..."
+  description = "咖啡续命中ing... // GPG Key ID: 3A558BBF2AF694FF"
+
+  [[params.social]]
+    icon = "github"
+    name = "GitHub"
+    url = "https://github.com/Bonfire8458"
+
+  [[params.social]]
+    icon = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/Bonfire8458"
+
+  [[params.social]]
+    icon = "send"
+    name = "Telegram"
+    url = "https://t.me/bonfire8458"
+  
+  [[params.social]]
+    icon = "Matrix"
+    name = "matrix"
+    url = "https://matrix.to/#/@bonfire8458:matrix.org"
+
+  [[params.social]]
+    icon = "mail"
+    name = "Email"
+    url = "mailto:Unending2924@gmail.com"
+
+[params.style]
+  # 左背景色
+  darkestColor = "#040305"
+  # 右背景色
+  darkColor = "#38373A"
+  # 正文字色
+  lightColor = "#E6F2EC"
+  # 标题字色
+  lightestColor = "#E5E572"
+  # 圈圈、链接色
+  primaryColor = "#A970D8"
+
+[markup.goldmark.renderer]
+# 不渲染内嵌的 HTML 
+# unsafe = true
