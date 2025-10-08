@@ -61,7 +61,6 @@ jobs:
         with:
           path: ./public
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
@@ -72,3 +71,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
