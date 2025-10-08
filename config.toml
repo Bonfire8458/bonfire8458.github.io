@@ -48,6 +48,7 @@ theme = "m10c"
   favicon = "./images/favicon.png"
   #description = "* 秉持勇气与智慧，拿起心理学这根魔杖，舞动当下</p><p>* 咖啡续命中ing..."
   description = "咖啡续命中ing... // GPG Key ID: 3A558BBF2AF694FF"
+  
 
   [[params.social]]
     icon = "github"
