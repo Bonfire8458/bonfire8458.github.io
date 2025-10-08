@@ -38,8 +38,8 @@ jobs:
         fetch-depth: 0
 
     - name: 设置Pages
-        id: pages
-        uses: actions/configure-pages@v3
+      id: pages
+      uses: actions/configure-pages@v3
 
     - name: 安装Node.js依赖
       run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
