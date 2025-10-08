@@ -3,15 +3,18 @@ title: "第一篇 blog ，纪录部署 hugo 过程"
 date: 2022-09-25T10:23:16Z
 tags: 
   - hugo
-  - docker-compose
+  - github workflows
   - blog
 categories: IT技术
 author: Bonfire8458
+images: ["/images/趴.webp"]
+twitter: 
+  card: "summary"
 draft: false
 ---
 
 
-# 2025.10.08 更新，使用 github workflows 部署，简化流程
+# 2025.10.08 更新，使用 github workflows 部署，简化流程。
 
 <!--more-->
 
