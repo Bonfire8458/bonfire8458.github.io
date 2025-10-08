@@ -9,6 +9,104 @@ categories: IT技术
 author: Bonfire8458
 draft: false
 ---
+
+
+# 2025.10.08 更新，使用 github workflows 部署，简化流程
+## 一、创建空git项目，添加 `.github/workflows/hugo.yml`
+
+```yaml
+name: 部署hugo
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.151.0
+    steps:
+      - name: 安装 Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: 安装 Dart Sass
+        run: sudo snap install dart-sass
+
+      - name: 检出项目
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: 配置 GitHub Pages 设置
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: 安装 Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
+      - name: 编译 Hugo 静态文件
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: 将构建产物上传为 GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} ## token的workflows权限，必须配置
+
+```
+
+
+## 二、复制原项目 **content、static、config.toml、README.md ** 到新项目目录，添加主题文件 `git submodule add https://github.com/Bonfire8458/hugo-theme-m10c.git themes/m10c`。
+
+## 三、提交仓库到 github，这次遇到了问题，报 **Branch "master" is not allowed to deploy to github-pages due to environment protection rules.**，需要调整 github 设置。
+- 添加 tokens 权限 workflows 
+- 在 **Settings > Environments > github-pages** 中，添加 master 分支允许部署的规则。
+- 在**Settings > Actions > General** 选择 Read and write permissions，以确保工作流可以推送内容到目标分支，勾选 **Allow GitHub Actions to create and approve pull requests **
+- 在**Settings > Pages > Source** 配置为 **GitHub Actions**
+
+## 四、本地编写新页面，直接添加在 **content**文件夹内，使用 **vnote** 软件编写。
+
+## 评论
+{{< x user="Bonfire8458" id="1574019861847502848" >}} 
+
+
+-----------------
+
+
+
 嗯呢，一直以来想搭建一个 blog ，纪录一些东西。
 
 这是 blog 搭建的一些简略纪录，作为第一篇好像也还不错。
@@ -16,7 +114,7 @@ draft: false
 <!--more-->
 
 
-# 一、编写 dockerfile ，构建基础镜像
+##  一、编写 dockerfile ，构建基础镜像
 
 docker 和 docker-compose 安装配置略.
 
@@ -60,7 +158,7 @@ WORKDIR /src
 CMD bash ~/init/init.sh && hugo server --buildDrafts --bind="0.0.0.0" --baseURL=http://<your_ip>:1313
 ```
 
-# 二、编写 `./init/init.sh`
+## 二、编写 `./init/init.sh`
 ```bash
 #  判断空文件夹函数，防止重启容器导致数据被删除
 is_empty_dir(){
@@ -73,7 +171,7 @@ if is_empty_dir '/src' ; then
 fi
 ```
 
-# 三、编写 docker-compose
+##  三、编写 docker-compose
 ```yaml
 version: '3'
 services:
@@ -91,7 +189,7 @@ services:
 ```
 
 
-# 四、配置hugo
+## 四、配置hugo
 ## 配置 ssh 密钥和 创建 github 仓库
 宿主机  `<user_name>` 用户密钥配置到 github。这样配置容器使用宿主机密钥，可以让其他 docker 项目可以使用同一个密钥。
 
@@ -143,10 +241,10 @@ git push -u github master
 
 ```
 
-# 五、发布 blog
+## 五、发布 blog
 进入 `<your_github_name>`.github.io 仓库，进入setting-->pages-->Build and deployment-->Github Actions-->save-->不需要自己编写 deploy 文件，可以选择hugo模板，然后保存提交到github仓库。
 
-# 六、修改`./init/init.sh`，以方便迁移
+## 六、修改`./init/init.sh`，以方便迁移
 ```bash
 # 判断空文件夹函数，防止重启容器导致数据被删除
 is_empty_dir(){
@@ -164,7 +262,7 @@ if is_empty_dir '/src' ; then
 fi
 ```
 
-# 七、结束
+## 七、结束
 ## 备份与迁移
 这样，本地只需要备份 dockerfile 、docker-compose.yml 、init/init.sh 三个文件/文件夹就可以迁移部署到有 docker 的机器上了。
 
@@ -175,4 +273,3 @@ fi
 ## 写文章
 写文章不太方便，需要使用vim，后续可能需要改用 python 的镜像做基础版本，写一个页面。在这点上 hugo 不太方便，hexo 有 hexo-admin 可以使用可是方便多了。
 
-# 评论系统使用推特

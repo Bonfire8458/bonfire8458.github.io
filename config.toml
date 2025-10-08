@@ -74,6 +74,11 @@ theme = "m10c"
     name = "Email"
     url = "mailto:Unending2924@gmail.com"
 
+  [[params.social]]
+    icon = "reddit"
+    name = "Reddit"
+    url = "https://www.reddit.com/user/Bonfire8458/"
+
 [params.style]
   # 左背景色
   darkestColor = "#040305"
@@ -86,6 +91,17 @@ theme = "m10c"
   # 圈圈、链接色
   primaryColor = "#A970D8"
 
-[markup.goldmark.renderer]
+[markup]
+  [goldmark.renderer]
 # 不渲染内嵌的 HTML 
 # unsafe = true
+  [markup.highlight]
+    codeFences = true        # 启用 Markdown 代码块（```）
+    guessSyntax = true       # 自动检测代码语言
+    hl_Lines = ""            # 支持高亮特定行（例如 "1-3,5"）
+    lineNoStart = 1          # 行号从 1 开始
+    lineNos = true           # 显示行号
+    lineNumbersInTable = true # 将行号放在表格中，改善样式
+    noClasses = false        # 使用 CSS 类（而不是内联样式）
+    style = "monokai"        # 高亮样式（可选择 monokai, dracula 等）
+    tabWidth = 4             # 制表符宽度
