@@ -37,7 +37,7 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-          
+
 
       # - name: 设置Pages
       #   id: pages
@@ -46,15 +46,12 @@ jobs:
       # - name: 安装Node.js依赖
       #   run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
-      # - name: Setup Hugo
-      #   uses: peaceiris/actions-hugo@v3
-      #   with:
-      #     hugo-version: latest
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
 
       - name: 使用Hugo构建
-        # env:
-        #   HUGO_ENVIRONMENT: production
-        #   HUGO_ENV: production
         run:
           hugo --gc --minify # --baseURL "${{ steps.pages.outputs.base_url }}/"
 
