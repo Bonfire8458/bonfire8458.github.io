@@ -55,9 +55,9 @@ theme = "m10c"
     url = "https://github.com/Bonfire8458"
 
   [[params.social]]
-    icon = "twitter"
+    icon = "X"
     name = "Twitter"
-    url = "https://twitter.com/Bonfire8458"
+    url = "https://x.com/Bonfire8458"
 
   [[params.social]]
     icon = "send"
