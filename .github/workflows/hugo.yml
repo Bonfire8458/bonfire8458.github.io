@@ -37,6 +37,7 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+          
 
       # - name: 设置Pages
       #   id: pages
@@ -50,12 +51,12 @@ jobs:
       #   with:
       #     hugo-version: latest
 
-      # - name: 使用Hugo构建
-      #   # env:
-      #   #   HUGO_ENVIRONMENT: production
-      #   #   HUGO_ENV: production
-      #   run:
-      #     hugo --gc --minify # --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: 使用Hugo构建
+        # env:
+        #   HUGO_ENVIRONMENT: production
+        #   HUGO_ENV: production
+        run:
+          hugo --gc --minify # --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       # - name: 上传构建产物
       #   uses: actions/upload-pages-artifact@v3
