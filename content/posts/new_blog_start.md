@@ -12,6 +12,9 @@ draft: false
 
 
 # 2025.10.08 更新，使用 github workflows 部署，简化流程
+
+<!--more-->
+
 ## 一、创建空git项目，添加 `.github/workflows/hugo.yml`
 
 ```yaml
@@ -111,7 +114,7 @@ jobs:
 
 这是 blog 搭建的一些简略纪录，作为第一篇好像也还不错。
 
-<!--more-->
+
 
 
 ##  一、编写 dockerfile ，构建基础镜像
